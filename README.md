@@ -48,3 +48,6 @@ except Exception as e: # in case any error happens
 finally:
 	print("\nthe code run fine\n") # then let the user know that the execution is done
 ```
+
+#### CRUD
+- `create`, `read`, `update`, `delete`

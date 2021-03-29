@@ -18,15 +18,18 @@
 # 	print("\nthe code run fine\n") # then let the user know that the execution is done
 
 # third iteration
-try:
-	with open("orders.txt", 'w') as file: # we open the file in write mode
+def add_food(filename, line):
+	try:
+		with open(filename, 'w') as file: # we open the file in write mode
 
-		file.write("\ncheescake") # we write a new line in the file
+			file.write("\n" + line) # we write a new line in the file
 
-		for i in file: # we print the contents to check if everything worked fine
-			print(i)
+			for i in file: # we print the contents to check if everything worked fine
+				print(i)
 
-except Exception as e: # in case any error happens
-	print(e) # print the error
-finally:
-	print("\nthe code run fine\n") # then let the user know that the execution is done
+	except Exception as e: # in case any error happens
+		print(e) # print the error
+	finally:
+		print("\nthe code run fine\n") # then let the user know that the execution is done
+
+add_food("orders.txt", "cheescake")
